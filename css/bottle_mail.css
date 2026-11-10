@@ -1,0 +1,12 @@
+/* ボトルメール（手紙タブ）専用スタイル。共通部分は style.css */
+.canvas-wrap canvas { width: 100%; max-width: 400px; height: auto; border: 2px solid var(--line-soft); background: #fff; touch-action: none; display: block; cursor: crosshair; }
+.history-panel { display: none; }
+.history-panel.active { display: block; }
+.section-label { font-size: 0.85rem; color: var(--sub); margin: 12px 0 4px; }
+.opened { border-color: var(--accent); }
+
+/* リアクション（受け取った人が押したものを目立たせる／履歴に表示する） */
+.js-react.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+.history-react { margin-top: 8px; font-size: 0.85rem; }
+.react-chip { display: inline-block; margin: 2px 4px 2px 0; padding: 2px 10px; border-radius: 999px; background: #eaf2fb; color: var(--accent-dark); font-weight: 700; }
+.react-n { margin-left: 4px; }

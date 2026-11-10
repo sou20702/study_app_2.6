@@ -1,0 +1,19 @@
+/* 設定タブ専用スタイル */
+.setting-row { display: grid; grid-template-columns: 150px 1fr; gap: 10px; align-items: center; margin-bottom: 14px; }
+.setting-row > label:first-child { font-size: 0.9rem; color: var(--sub); }
+.setting-row select { max-width: 320px; }
+.check { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 0.95rem; }
+.check input { width: auto; }
+.range-line { display: flex; align-items: center; gap: 12px; max-width: 420px; }
+.range-line input[type=range] { flex: 1; padding: 0; border: 0; background: transparent; accent-color: var(--accent); }
+.range-val { min-width: 3.2em; text-align: right; font-variant-numeric: tabular-nums; }
+.reset-block { padding: 12px; margin-bottom: 12px; background: #fff; border: 2px solid var(--line-soft); }
+.reset-block:last-child { margin-bottom: 0; }
+.reset-block h3 { margin-bottom: 4px; }
+.reset-block .note { margin: 4px 0 10px; }
+.credit-group { margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--line-soft); }
+.credit-item { background: #fff; border: 2px solid var(--line-soft); padding: 10px 12px; margin-bottom: 10px; }
+.credit-item dl { display: grid; grid-template-columns: 11em 1fr; gap: 4px 12px; margin: 0; }
+.credit-item dt { color: var(--sub); font-size: 0.85rem; }
+.credit-item dd { margin: 0; word-break: break-word; }
+@media (max-width: 640px) { .setting-row { grid-template-columns: 1fr; gap: 4px; } .credit-item dl { grid-template-columns: 1fr; gap: 0; } .credit-item dd { margin-bottom: 6px; } }

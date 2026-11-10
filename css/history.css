@@ -1,0 +1,14 @@
+/* 歴史タブ専用スタイル（.stat などは world.css と同じ見た目） */
+.history-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.history-summary .stat { background: var(--panel); border: 2px solid var(--line); padding: 10px 12px; }
+.history-summary .stat-label { font-size: 0.78rem; color: var(--sub); }
+.history-summary .stat-num { font-size: 1.6rem; line-height: 1.3; color: var(--accent-dark); }
+.history-summary .stat-unit { font-size: 0.8rem; color: var(--sub); }
+.history-main { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.history-main .hp { font-size: 1.2rem; color: var(--accent-dark); }
+.history-main .ht { word-break: break-word; }
+.stage-up { display: inline-block; margin: 6px 0 2px; padding: 0 8px; border: 2px solid var(--accent); background: var(--chip); font-size: 0.85rem; }
+.caption-view, .caption-edit { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line-soft); }
+.caption-view .caption-text { flex: 1; min-width: 140px; word-break: break-word; }
+.caption-edit input { flex: 1; min-width: 160px; width: auto; }
+@media (max-width: 640px) { .history-summary { grid-template-columns: 1fr; } }

@@ -1,0 +1,21 @@
+/* クエスト（課題リスト）専用スタイル */
+.group-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.group-menu form { background: #fff; border: 2px solid var(--line-soft); padding: 12px; }
+.group-menu h4 { margin: 0 0 8px; }
+.code-box { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 2px dashed var(--line); padding: 4px 10px; }
+.code-box .code { font-size: 1.3rem; letter-spacing: 3px; color: var(--accent-dark); }
+.member-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.member-list li { display: flex; justify-content: space-between; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line-soft); padding: 5px 10px; }
+
+.form-card { max-width: 540px; }
+.options-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.options-bar label { font-size: 0.85rem; color: var(--sub); }
+.options-bar select { width: auto; min-width: 220px; }
+
+.actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.actions form { margin: 0; }
+.deadline-tag { font-size: 0.75rem; padding: 0 6px; margin-left: 8px; border: 1px solid var(--accent); color: var(--accent-dark); }
+.deadline-tag.over { border-color: var(--err); color: var(--err); }
+.score-cell { color: var(--sub); white-space: nowrap; }
+tr.leaving { opacity: 0; transition: opacity 0.25s; }
+.chart-wrap { width: 460px; max-width: 100%; margin: 14px 0; background: var(--panel); border: 2px solid var(--line); padding: 10px; }

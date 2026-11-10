@@ -1,0 +1,40 @@
+/* ホームタブ（世界の描画）専用スタイル */
+.status-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
+.stat { background: var(--panel); border: 2px solid var(--line); padding: 10px 12px; color: var(--ink); text-decoration: none; display: block; }
+a.stat:hover { background: var(--chip); }
+.stat-label { font-size: 0.78rem; color: var(--sub); margin-bottom: 2px; }
+.stat-num { font-size: 1.6rem; line-height: 1.3; color: var(--accent-dark); }
+.stat-unit { font-size: 0.8rem; color: var(--sub); }
+.stat .progress { margin: 8px 0 2px; }
+
+.world-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.world-head h2 { margin-bottom: 8px; }
+
+.world-stage { position: relative; border: 3px solid var(--line); background: #0a1a38; }
+.world-stage canvas { display: block; width: 100%; height: auto; transition: opacity 0.12s; }
+.world-stage canvas.swap { opacity: 0.15; }
+.world-empty { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); width: 78%; text-align: center; font-size: 0.9rem; padding: 6px 10px; background: rgba(247, 250, 255, 0.9); border: 2px solid var(--line); }
+
+.world-arrow {
+    position: absolute; min-width: 40px; min-height: 36px; padding: 4px 10px; cursor: pointer;
+    font-family: inherit; font-size: 0.8rem; color: var(--ink);
+    background: rgba(247, 250, 255, 0.92); border: 2px solid var(--line);
+}
+.world-arrow:hover { background: #fff; }
+.world-arrow:disabled { opacity: 0.7; cursor: not-allowed; background: rgba(247, 250, 255, 0.75); color: var(--sub); border-style: dashed; }
+.world-arrow.up    { top: 8px;    left: 50%; transform: translateX(-50%); }
+.world-arrow.down  { bottom: 8px; left: 50%; transform: translateX(-50%); }
+.world-arrow.left  { left: 8px;   top: 50%;  transform: translateY(-50%); }
+.world-arrow.right { right: 8px;  top: 50%;  transform: translateY(-50%); }
+
+.world-foot { display: flex; gap: 16px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+.world-foot .note { margin: 0; flex: 1; min-width: 200px; }
+.minimap { display: grid; gap: 3px; }
+.minimap button { width: 22px; height: 22px; padding: 0; cursor: pointer; background: var(--chip); border: 2px solid var(--line-soft); }
+.minimap button.here { background: var(--accent); border-color: var(--accent-dark); }
+.minimap button.locked { background: transparent; border-style: dashed; opacity: 0.5; cursor: not-allowed; }
+.minimap .gap { visibility: hidden; }
+
+@media (max-width: 640px) {
+    .status-grid { grid-template-columns: 1fr 1fr; }
+}
